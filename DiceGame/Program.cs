@@ -7,32 +7,16 @@ namespace DiceGame
     {
         static void Main(string[] args)
         {
-
-        }
-
-
-    }
-    public class Dice
-    {
-        private static Random random = new Random();
-
-        public int Roll()
-        {
-            int randomNumber = random.Next(0, 7);
-
-            if (randomNumber == 0)
+            while (true)
             {
-                return 1;
-            }
-            else if (randomNumber == 7)
-            {
-                return 6;
-            }
-            else
-            {
-                return randomNumber;
+                Console.WriteLine("Welcome to the Dice Game!");
+                Console.WriteLine("Press any key to roll the dice");
+                Console.ReadLine();
+                Turn turn = new Turn();
+                int result = turn.Roll();
             }
         }
+        // Show Result of each roll in a class
     }
 }
 
